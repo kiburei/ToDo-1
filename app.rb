@@ -1,9 +1,10 @@
 require("sinatra")
 require("sinatra/reloader")
 also_reload("lib/**/*.rb")
+require('./lib/todo')
 
 get("/") do
-  @task = Task.all()
+  @tasks = Task.all()
   erb(:index)
 end
 
