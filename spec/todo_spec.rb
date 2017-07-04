@@ -2,6 +2,10 @@ require('rspec')
 require('todo')
 
 describe(Task) do
+  before() do
+    Task.clear()
+  end
+
   describe("#description") do
     it("lets you give it a description") do
       test_task = Task.new("scrub the zebra")
