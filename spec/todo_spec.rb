@@ -22,4 +22,12 @@ describe(Task) do
       expect(Task.all()).to(eq([test_task]))
     end
   end
+
+  describe(".clear") do
+    it("empties out all of the saved tasks") do
+      Task.new("wash the lion").save()
+      Task.clear()
+      expect(Task.all()).to(eq([]))
+    end
+  end
 end
