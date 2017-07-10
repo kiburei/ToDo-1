@@ -1,0 +1,14 @@
+<h3>Add a task to <%= @list.name() %> </h3>
+<form action="/tasks" method="post">
+  <input id="list_id" name="list_id" type="hidden" value="<%= @list.id() %>">
+  <label for="description">Description of the task:</label>
+  <input id="description" name="description" type="text">
+  <button type="submit">Add task</button>
+</form>
+<hr>
+<div class="container">
+  <a href="/">Home</a>
+  <a href="/lists">View All Lists</a>
+  <a href="/lists/new">Add New List</a>
+  <a href="/lists/new">Add New Task</a>
+</div>

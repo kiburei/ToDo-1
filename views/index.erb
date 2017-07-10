@@ -1,14 +1,5 @@
-<h1 class="center-align">ToDo</h1>
-<p class="center-align">Here are all your tasks:</p>
-<ul class="center-align">
-	<% @tasks.each() do |task| %>
-	<li><%= task.description() %></li>
-	<% end %>
-</ul>
-<p>Create a new task:</p>
-<form action="/task" method="post">
-	<div class="input-field">
-		<input type="text" name="description" id="description">
-	</div>
-	<button class="waves-effect waves-light btn" type="submit">Add Task</button>
-</form>
+<h1>Welcome to the To Do App</h1>
+<div class="container">
+    <a href="/lists">View All Lists</a>
+    <a href="/lists/new">Add New List</a>
+</div>

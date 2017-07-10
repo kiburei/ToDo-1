@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+body {
+  font-size: 18px;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+.input-field {
+  width: 60%;
+  margin: auto;
+}
+
+.submit-btn {
+  text-align: center;
+}
