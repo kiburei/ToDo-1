@@ -2,15 +2,13 @@
 
 A todo list application created using Sinatra.
 
-by: Lewis Nyoike & Edward Mudaida
-
-![Screenshot](screenshot.png)
+by: Lewis Nyoike & Newton Karanu & Edward Mudaida
 
 ## Technologies used
 
 `Ruby` `Sinatra` `RSpec` `Bundler`
 
-## Setup 
+## Setup
 
 1. Clone the repo: `$ git clone [URL]`
 
