@@ -1,6 +1,7 @@
 require('rspec')
 require('pg')
 require('list')
+require("spec_helper")
 
 DB = PG.connect({:dbname => 'to_do_test'})
 
@@ -35,11 +36,20 @@ describe(List) do
   describe("#save") do
     it("lets you save lists to the database") do
       list = List.new({:name => "Epicodus stuff", :id => nil})
-      list.save()
+      list.save() 
       expect(List.all()).to(eq([list]))
     end
   end
 
+    describe("#update")do 
+        it"lets you update lists in the database" do
+            list = List.new({:name => "Moringa school stuff", :id => nil})
+            list.save()
+            list.update({:name => "Homework stuff"})
+            expect(list.name()).to(eq("Homework stuff"))
+        end
+    end
+    
   describe("#==") do
     it("is the same list if it has the same name") do
       list1 = List.new({:name => "Epicodus stuff", :id => nil})
