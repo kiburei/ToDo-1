@@ -6,7 +6,7 @@ set(:show_exceptions, false)
 
 describe('adding a new list', {:type => :feature})  do
   xit('allows a user to click a list to see the tasks and details for it.') do
-    visit('/')
+    visit('/lists')
     click_link('Add New List')
     fill_in('name', :with => 'Moringaschool Work')
     click_button('Add List')
@@ -37,11 +37,11 @@ describe('seeing details for a single list', {:type => :feature}) do
 end
 
 describe('adding tasks to a list', {:type => :feature}) do
-  xit('allows a user to add a task to a list') do
-    test_list = List.new({:name => 'School stuff'})
+  it('allows a user to add a task to a list') do
+    test_list = List.new({:name => 'School stuff', :id => nil})
     test_list.save()
-    visit("/lists/#{test_list.id()}")
-    fill_in("Description", {:with => "Learn SQL"})
+    visit("/tasks")
+    fill_in("description", {:with => "Learn SQL"})
     click_button("Add task")
     expect(page).to have_content("Success")
   end
