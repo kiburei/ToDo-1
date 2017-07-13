@@ -9,15 +9,24 @@ DB = PG.connect({:dbname => "to_do"})
 
 
 get("/") do
-    @lists = List.all()
+  @lists = List.all()
   erb(:index)
 end
 
+post('/') do
+  name = params.fetch("name")
+  list = List.new({:name => name, :id => nil})
+  list.save()
+  @lists = List.all()
+  erb(:layout)
+end
+
+
 post("/lists") do
-    name = params.fetch("name")
-    list = List.new({:name => name, :id => nil})
-    list.save()
-    @lists = List.all()
+  name = params.fetch("name")
+  list = List.new({:name => name, :id => nil})
+  list.save()
+  @lists = List.all()
   erb(:index)
 end
 
@@ -28,22 +37,22 @@ get("/lists/:id") do
 end
 
 get("/lists/:id/edit") do
-        @list = List.find(params.fetch("id").to_i)
-        erb(:list_edit)
+  @list = List.find(params.fetch("id").to_i)
+  erb(:list_edit)
 end
 
 patch("/lists/:id") do
-    name = params.fetch("name")
-    @list = List.find(params.fetch("id").to_i)
-    @list.update({:name => name})
-    erb(:list)
+  name = params.fetch("name")
+  @list = List.find(params.fetch("id").to_i)
+  @list.update({:name => name})
+  erb(:list)
 end
 
 delete("/lists/:id") do
-    @list = List.find(params.fetch("id").to_i)
-    @list.delete()
-    @list = List.all()
-    erb(:index)
+  @list = List.find(params.fetch("id").to_i)
+  @list.delete()
+  @list = List.all()
+  erb(:index)
 end
 
 post("/tasks") do
@@ -56,7 +65,6 @@ post("/tasks") do
 end
 
 get("/lists/:id/edit") do
-    @list = List.find(params.fetch("id").to_i())
-    erb(:list_edit)
+  @list = List.find(params.fetch("id").to_i())
+  erb(:list_edit)
 end
-

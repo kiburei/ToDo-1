@@ -1,6 +1,8 @@
 <h1>Your Current Lists</h1>
+
 <% if @lists.any?() %>
 <h3>Here are your lists:</h3>
+
 <ul>
   <% @lists.each() do |list| %>
   <li><a href="/lists/<%= list.id()%>"><%= list.name() %></a> </li>

@@ -12,3 +12,11 @@ body {
 .submit-btn {
   text-align: center;
 }
+
+.dropdown-button {
+  width: 200px;
+}
+
+#dropdown {
+  margin-top: 10%;
+}
