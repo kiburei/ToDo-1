@@ -14,7 +14,7 @@
 <form action="/tasks" method="post">
 
     <label for="list_id">Select a list</label>
-    <select id="list_id" name="list_id" type="text">
+    <select id="list_id" name="list_id" type="text" class="browser-default">
         <% @lists.each() do |list| %>
         <option value="<%= list.id()%>"> <%= list.name() %> </option>
         <% end %>

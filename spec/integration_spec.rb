@@ -37,7 +37,7 @@ describe('seeing details for a single list', {:type => :feature}) do
 end
 
 describe('adding tasks to a list', {:type => :feature}) do
-  it('allows a user to add a task to a list') do
+  xlit('allows a user to add a task to a list') do
     test_list = List.new({:name => 'School stuff', :id => nil})
     test_list.save()
     visit("/tasks")
