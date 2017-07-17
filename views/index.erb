@@ -1,24 +1,23 @@
-<h1>To Do</h1>
+<h1>Todo</h1>
 <p>Create a new list:</p>
 <form action="/lists" method="post">
   <label for="name">Assign a name to your list:</label>
   <input id="name" name="name" type="text">
-  <button type="submit" class="waves-effect waves-light btn">Add list</button>
+  <button type="submit" class="waves-effect waves-light btn white black-text">Add list</button>
 </form>
-<p>Add tasks to my list:</p>
-<form action="/tasks" method="post">
-  <label for="list_id">Select a list</label>
-  <select id="list_id" name="list_id" type="text" class="browserdefault">
-    <% @lists.each() do |list| %>
-      <option value="<%= list.id()%>">
-        <%= list.name() %>
-      </option>
-      <% end %>
-  </select>
-  <label for="description">Description of the task:</label>
-  <input id="description" name="description" type="text">
-  <button type="submit" class="waves-effect waves-light red btn">Add task</button>
-</form>
+<div class="input-field">
+<select>
+      <% @lists.each() do |list| %>
+        <li value="<%= list.id()%>">
+          <%= list.name() %>
+            <% end %>
+        </li>
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+</select>
+</div>
 <% if @lists.any?() %>
   <p>Click on a list to see the list of tasks:</p>
   <ul>

@@ -1,9 +1,10 @@
+require("sinatra/activerecord")
 require("rspec")
 require("pg")
 require("list")
 require("todo")
 
-DB = PG.connect({:dbname => "to_do_test"})
+ENV['RACK_ENV'] = 'test'
 
 RSpec.configure do |config|
   config.after(:each) do
