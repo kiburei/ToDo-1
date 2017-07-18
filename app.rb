@@ -1,7 +1,7 @@
 require("sinatra/activerecord")
 require('sinatra')
 require('sinatra/reloader')
-require('./lib/todo')
+require('./lib/task')
 require('./lib/list')
 also_reload('lib/**/*.rb')
 require("pg")
@@ -60,8 +60,11 @@ post("/tasks") do
   list_id = params.fetch("list_id").to_i()
   @list = List.find(list_id)
   @task = Task.new({:description => description, :list_id => list_id})
-  @task.save()
-  erb(:success)
+  if @task.save()
+    erb(:success)
+  else
+    erb(:success)
+  end
 end
 
 get("/lists/:id/edit") do
