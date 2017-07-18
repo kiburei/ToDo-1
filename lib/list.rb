@@ -1,6 +1,6 @@
 class List < ActiveRecord::Base
-  validates(:description, :presence => true)
-  
+  validates(:name, :presence => true)
+
   define_method(:tasks) do
     list_tasks = []
     tasks = Task.all
