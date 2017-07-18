@@ -1,34 +1,39 @@
-<h1>Todo</h1>
-<p>Create a new list:</p>
+<a href="/" class="todo_h1"><h1 class="center-align">Todo</h1></a>
 <form action="/lists" method="post">
-  <label for="name">Assign a name to your list:</label>
-  <input id="name" name="name" type="text">
-  <button type="submit" class="waves-effect waves-light btn white black-text">Add list</button>
+    <div class="input-field">
+        <label for="name">Assign a name to your list:</label>
+        <input id="name" name="name" type="text" required="">
+    </div>
+    <div class="add_list_btn">
+        <button type="submit" class="waves-effect btn white black-text">Add list</button>
+    </div>
 </form>
 <div class="input-field">
-<select>
-      <% @lists.each() do |list| %>
-        <li value="<%= list.id()%>">
-          <%= list.name() %>
-            <% end %>
-        </li>
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">three</a></li>
-</select>
+    <select>
+        <% @lists.each() do |list| %>
+            <li value="<%= list.id()%>">
+                <%= list.name() %>
+                    <% end %>
+            </li>
+    </select>
+    <% @tasks.not_done.each do |task| %>
+        <li>
+            <%= task.description%><a href="/tasks/<%=task.id%>/edit">Update</a></li>
+        <% end %>
 </div>
-<% if @lists.any?() %>
-  <p>Click on a list to see the list of tasks:</p>
-  <ul>
-    <% @lists.each do |list| %>
-      <li>
-        <a href="/lists/<%= list.id() %>">
-          <%= list.name() %>
-        </a>
-      </li>
-      <% end%>
-  </ul>
-  <% else %>
-    <p>There are no lists yet!</p>
-    <% end %>
+<div class="lists">
+    <% if @lists.any?() %>
+        <p>Click on a list to see the list of tasks:</p>
+        <div class="collection">
+            <% @lists.each do |list| %>
+                <li class="collection-item" ">
+                    <a href="/lists/<%=list.id() %>">
+                    <%= list.name() %>
+                        </a>
+                </li>
+                <% end%>
+                    </ul>
+                    <% else %>
+                        <p>There are no lists yet!</p>
+                        <% end %>
+        </div>
