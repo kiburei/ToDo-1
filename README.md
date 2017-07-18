@@ -16,14 +16,14 @@ by: `Andrew Kiburei` & `Edward Mudaida`
 
 3. Create the databases: `rake db:create`
 
-4. Crreate tables: `rake db:migrate`
+4. Create tables: `rake db:migrate`
 
 5. Run the app: `$ ruby app.rb`
 
 6. Navigate to [http://localhost:4567/](http://localhost:4567/)
 
-Use `$ rspec` to run tests
+Use `$ rspec` to :running: tests
 
 ## LICENSE
 
-[MIT LICENSE](https://github.com/EdwardMudaida/ToDo/blob/master/LICENSE)
+[MIT LICENSE](https://github.com/kiburei/ToDo-1/blob/master/LICENSE)
