@@ -1,9 +1,10 @@
 class CreateLists < ActiveRecord::Migration[5.1]
+  has_many(:tasks)
   def change
-  	create_table(:lists) do |t|
-  		t.column(:name, :string)
-  		t.timestamps()
-  	end
-  	add_column(:tasks, :list_id, :integer)
+    create_table(:lists) do |t|
+      t.column(:name, :string)
+      t.timestamps()
+    end
+    add_column(:tasks, :list_id, :integer)
   end
 end
