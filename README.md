@@ -1,12 +1,12 @@
 # TODO
 
-A todo list application created using Sinatra.
+A CRUD application for a todo list.
 
-by: Lewis Nyoike & Newton Karanu & Edward Mudaida
+by: `Andrew Kiburei` & `Edward Mudaida`
 
 ## Technologies used
 
-`Ruby` `Sinatra` `RSpec` `Bundler`
+`Ruby` `Sinatra` `RSpec` `Bundler` `ActiveRecord` `Rake`
 
 ## Setup
 
@@ -14,9 +14,13 @@ by: Lewis Nyoike & Newton Karanu & Edward Mudaida
 
 2. Install dependencies: `$ bundle`
 
-3. Run the app: `$ ruby app.rb`
+3. Create the databases: `rake db:create`
 
-4. Navigate to [http://localhost:4567/](http://localhost:4567/)
+4. Crreate tables: `rake db:migrate`
+
+5. Run the app: `$ ruby app.rb`
+
+6. Navigate to [http://localhost:4567/](http://localhost:4567/)
 
 Use `$ rspec` to run tests
 
