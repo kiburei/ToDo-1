@@ -1,26 +1,44 @@
-.add_list_btn, .add_task_btn {
-    text-align: center;
-}
+ @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+ @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
 
-.input-field {
-    width: 45%;
-    margin: auto;
-}
+ body {
+     font-size: 18px;
+     font-family: 'Ubuntu Mono', monospace;
+     background: url(https://static.pexels.com/photos/507829/pexels-photo-507829.jpeg) no-repeat center center fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+ }
 
-.todo_h1 {
-    color: black;
-}
+ .add_list_btn,
+ .add_task_btn {
+     text-align: center;
+ }
 
-.lists {
-    text-align: center;
-    margin: auto;
-}
+ .input-field {
+     width: 45%;
+     margin: auto;
+ }
 
-.collection li {
-    list-style-type: none;
-}
+ .todo_h1 {
+     color: black;
+ }
 
-.collection {
-    width: 45%;
-    margin: auto;
-}
+ .lists {
+     text-align: center;
+     margin: auto;
+ }
+
+ .collection li {
+     list-style-type: none;
+ }
+
+ .collection {
+     width: 45%;
+     margin: auto;
+ }
+
+ .to-do {
+     font-family: 'Luckiest Guy', cursive;
+ }
