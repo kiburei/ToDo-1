@@ -2,43 +2,28 @@
 <html lang="en">
 
 <head>
-  <title>ToDo</title>
-  <meta charset="utf-8">
-  <link rel="icon" type="image/png" href="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.todo-lists.com%2Fimages%2Ficon.png&f=1">
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <title>Todo</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Fios7-active-basic%2F512%2Ftodo_list_text_document-512.png&f=1">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
-<header>
-  <div class="navbar-fixed">
-    <!-- Dropdown Structure -->
-    <nav class="indigo">
-      <div class="nav-wrapper">
-        <a href="/" class="brand-logo center">Todo list</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-        </ul>
-      </div>
-    </nav>
-  </div>
-</header>
 
 <body>
-  <div class="container">
-    <%= yield %>
-  </div>
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-  <script src="/js/init.js"></script>
+    <div class="container">
+        <%= yield %>
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="/js/init.js"></script>
 </body>
 
 </html>
