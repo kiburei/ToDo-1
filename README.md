@@ -8,6 +8,8 @@ by: `Andrew Kiburei` & `Edward Mudaida`
 
 `Ruby` `Sinatra` `RSpec` `Bundler` `ActiveRecord` `Rake`
 
+![Screenshot](screenshot.png)
+
 ## Setup
 
 1. Clone the repo: `$ git clone [URL]`
