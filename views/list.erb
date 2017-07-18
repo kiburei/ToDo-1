@@ -1,7 +1,6 @@
 <h3 class="center-align"><%= @list.name() %></h3>
-<a href="/lists/<%= @list.id() %>/edit"><i class="material-icons small">edit</i>
-</a><a href="/"><i class="material-icons small">home</i>
-</a>
+<a class="btn-floating btn-small waves-effect waves-light indigo" href="/"><i class="material-icons">home</i></a>
+<a class="btn-floating btn-small waves-effect waves-light red" href="/lists/<%= @list.id() %>/edit"><i class="material-icons">edit</i></a>
 <form action="/tasks" method="post">
     <input id="list_id" name="list_id" type="hidden" value="<%= @list.id() %>">
     <div class="input-field">
