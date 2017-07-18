@@ -10,6 +10,7 @@ require("pg")
 
 get("/") do
   @lists = List.all()
+  @tasks = Task.all
   erb(:index)
 end
 
@@ -24,9 +25,10 @@ end
 
 post("/lists") do
   name = params.fetch("name")
-  list = List.new({:name => name, :id => nil})
+  list = List.new(name: name, id: nil)
   list.save()
   @lists = List.all()
+  @tasks = Task.all
   erb(:index)
 end
 
@@ -58,16 +60,20 @@ end
 post("/tasks") do
   description = params.fetch("description")
   list_id = params.fetch("list_id").to_i()
+  task = Task.new(description: description, id: nil, list_id: list_id)
+  task.save
   @list = List.find(list_id)
-  @task = Task.new({:description => description, :list_id => list_id})
-  if @task.save()
-    erb(:success)
-  else
-    erb(:success)
-  end
+  erb(:list)
 end
 
 get("/lists/:id/edit") do
   @list = List.find(params.fetch("id").to_i())
   erb(:list_edit)
+end
+
+patch 'lists/id' do
+  @task = Task.find(params.fetch('id').to_i)
+  @task.update(description: params.fetch('description'))
+  @tasks = Task.all
+  erb(:index)
 end
