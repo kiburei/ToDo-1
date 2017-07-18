@@ -12,7 +12,8 @@
  }
 
  .add_list_btn,
- .add_task_btn {
+ .add_task_btn,
+ .submit-btn {
      text-align: center;
  }
 
