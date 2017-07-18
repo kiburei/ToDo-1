@@ -1,22 +1,26 @@
-@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
-body {
-  font-size: 18px;
-  font-family: 'Didact Gothic', sans-serif;
+.add_list_btn, .add_task_btn {
+    text-align: center;
 }
 
 .input-field {
-  width: 60%;
-  margin: auto;
+    width: 45%;
+    margin: auto;
 }
 
-.submit-btn {
-  text-align: center;
+.todo_h1 {
+    color: black;
 }
 
-.dropdown-button {
-  width: 200px;
+.lists {
+    text-align: center;
+    margin: auto;
 }
 
-#dropdown {
-  margin-top: 10%;
+.collection li {
+    list-style-type: none;
+}
+
+.collection {
+    width: 45%;
+    margin: auto;
 }
