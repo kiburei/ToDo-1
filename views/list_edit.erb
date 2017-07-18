@@ -1,15 +1,18 @@
-<h1>Update the <%=@list.name() %> list </h1>
-
-  <form action="/lists/<%= @list.id() %>" method="post">
+<h3 class="center-align">Update the <%=@list.name() %> list </h3>
+<a class="btn-floating btn-small waves-effect waves-light indigo" href="/"><i class="material-icons">home</i></a>
+<form action="/lists/<%= @list.id() %>" method="post">
     <input name="_method" type="hidden" value="patch">
-    <label for="name">Rename your list:</label>
-    <input id="name" name="name" type="text">
-
-    <button type="submit">Update</button>
-  </form>
-
-  <form action="/lists/<%= @list.id() %>" method="post">
+    <div class="input-field">
+        <label for="name">Rename your list</label>
+        <input id="name" name="name" type="text">
+    </div>
+    <div class="submit-btn">
+        <button class="btn white black-text" type="submit">Update</button>
+    </div>
+</form>
+<!-- <form action="/lists/<%= @list.id() %>" method="post">
     <input name="_method" type="hidden" value="delete">
-
-    <button type="submit">Delete list</button>
-  </form>
+    <div class="submit-btn">
+        <button class="btn white black-text" type="submit">Delete list</button>
+    </div>
+</form> -->
