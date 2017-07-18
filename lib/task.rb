@@ -1,3 +1,8 @@
 class Task < ActiveRecord::Base
-  validates(:name, :presence => true)
+  belongs_to(:list)
+  validates(:description, :presence => true)
+
+  scope(:not_done, -> do
+          where(done: false)
+  end)
 end
