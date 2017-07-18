@@ -14,9 +14,9 @@ by: `Andrew Kiburei` & `Edward Mudaida`
 
 2. Install dependencies: `$ bundle`
 
-3. Create the databases: `rake db:create`
+3. Create the databases: `$ rake db:create`
 
-4. Create tables: `rake db:migrate`
+4. Create the tables: `$ rake db:migrate`
 
 5. Run the app: `$ ruby app.rb`
 
