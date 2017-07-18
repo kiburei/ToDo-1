@@ -1,41 +1,26 @@
-<p><a href="/lists/<%= @list.id() %>/edit">Edit <%= @list.name() %> list</a></p>
-  <p><a href="/">Return to Main Page</a></p>
-
-
-<h1><%= @list.name() %></h1>
-
-<% if @list.tasks().any?() %>
-  <h3>Here are all the tasks in this list:</h3>
-
-  <ul>
-    <% @list.tasks().each() do |task| %>
-      <li><%= task.description() %> </li>
-    <% end %>
-  </ul>
-
-  <% else %>
-    <p>There are no tasks on this list!</p>
-<% end %>
-
-<h3>Add a task to <%= @list.name() %> </h3>
-
+<h1 class="center-align"><%= @list.name() %></h1>
+<a href="/lists/<%= @list.id() %>/edit"><i class="material-icons small">edit</i>
+</a><a href="/"><i class="material-icons small">home</i>
+</a>
 <form action="/tasks" method="post">
-  <input id="list_id" name="list_id" type="hidden" value="<%= @list.id() %>">
-
-  <label for="description">Description of the task:</label>
-  <input id="description" name="description" type="text">
-
-  <button type="submit">Add task</button>
+    <input id="list_id" name="list_id" type="hidden" value="<%= @list.id() %>">
+    <div class="input-field">
+        <label for="description">Description of the task:</label>
+        <input id="description" name="description" type="text" required="">
+    </div>
+    <div class="add_task_btn">
+        <button type="submit" class="btn waves-effect white black-text">Add task</button>
+    </div>
 </form>
-
-<hr>
-
-<div class="container">
-  <a href="/">Home</a>
-  <a href="/lists">View All Lists</a>
-  <a href="/lists/new">Add New List</a>
-</div>
-
-<div class="container">
-  <a href="/"><button class="btn white">Home</a>
-</div>
+<br>
+<% if @list.tasks().any?() %>
+    <div class="collection">
+        <% @list.tasks().each() do |task| %>
+            <li class="collection-item">
+                <%= task.description() %>
+            </li>
+            <% end %>
+    </div>
+    <% else %>
+        <p class="center-align">There are no tasks on this list!</p>
+        <% end %>
