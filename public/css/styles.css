@@ -4,7 +4,8 @@
  body {
      font-size: 18px;
      font-family: 'Ubuntu Mono', monospace;
-     background: url(https://static.pexels.com/photos/507829/pexels-photo-507829.jpeg) no-repeat center center fixed;     -webkit-background-size: cover;
+     background: url(https://static.pexels.com/photos/507829/pexels-photo-507829.jpeg) no-repeat center center fixed;
+     -webkit-background-size: cover;
      -moz-background-size: cover;
      -o-background-size: cover;
      background-size: cover;
