@@ -1,6 +1,7 @@
 <h3 class="center-align"><%= @list.name() %></h3>
 <a class="btn-floating btn-small waves-effect waves-light indigo" href="/"><i class="material-icons">home</i></a>
-<a class="btn-floating btn-small waves-effect waves-light red" href="/lists/<%= @list.id() %>/edit"><i class="material-icons">edit</i></a>
+<a class="btn-floating btn-small waves-effect waves-light green" href="/lists/<%= @list.id() %>/edit"><i class="material-icons">edit</i></a>
+<a class="btn-floating btn-small waves-effect waves-light red" href=""><i class="material-icons">delete</i></a>
 <form action="/tasks" method="post">
     <input id="list_id" name="list_id" type="hidden" value="<%= @list.id() %>">
     <div class="input-field">
@@ -16,7 +17,7 @@
     <div class="collection">
         <% @list.tasks().each() do |task| %>
             <li class="collection-item">
-                <%= task.description() %>
+                <%= task.description() %><a class="waves-effect waves-light delete" href=""><i class="material-icons">delete</i></a><a class="waves-effect waves-light delete" href=""><i class="material-icons">edit</i></a>
             </li>
             <% end %>
     </div>
