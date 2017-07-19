@@ -17,7 +17,13 @@
     <div class="collection">
         <% @list.tasks().each() do |task| %>
             <li class="collection-item">
-                <%= task.description() %><a class="waves-effect waves-light delete" href=""><i class="material-icons">delete</i></a><a class="waves-effect waves-light delete" href=""><i class="material-icons">edit</i></a>
+                <%= task.id() %>
+                <form class="" action="/tasks/<%= task.id %>" method="post">
+                  <input type="hidden" name="_method" value="delete">
+                  <button type="submit" name="button">Delete</button>
+                  <!-- <a class="waves-effect waves-light delete"><i class="material-icons">delete</i></a> -->
+                </form>
+                <a class="waves-effect waves-light delete" href=""><i class="material-icons">edit</i></a>
             </li>
             <% end %>
     </div>
