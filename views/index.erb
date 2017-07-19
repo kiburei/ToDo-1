@@ -8,32 +8,19 @@
         <button type="submit" class="waves-effect btn white black-text">Add list</button>
     </div>
 </form>
-<div class="input-field">
-    <select>
-        <% @lists.each() do |list| %>
-            <li value="<%= list.id()%>">
-                <%= list.name() %>
-                    <% end %>
-            </li>
-    </select>
-    <% @tasks.not_done.each do |task| %>
-        <li>
-            <%= task.description%><a href="/tasks/<%=task.id%>/edit">Update</a></li>
-        <% end %>
-</div>
 <div class="lists">
     <% if @lists.any?() %>
         <p>Click on a list to see the list of tasks:</p>
         <div class="collection">
             <% @lists.each do |list| %>
                 <li class="collection-item" ">
-                    <a href="/lists/<%=list.id() %>">
+                    <a href="/lists/<%=list.id() %>" class="indigo-text">
                     <%= list.name() %>
                         </a>
                 </li>
                 <% end%>
-                    </ul>
                     <% else %>
                         <p>There are no lists yet!</p>
                         <% end %>
         </div>
+</div>
