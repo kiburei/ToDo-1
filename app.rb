@@ -46,8 +46,10 @@ end
 
 delete("/lists/:id") do
   @list = List.find(params.fetch("id").to_i)
+  @tasks = @list.tasks
+  @tasks.delete
   @list.delete()
-  @list = List.all()
+  @lists = List.all()
   erb(:index)
 end
 
